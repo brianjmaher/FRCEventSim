@@ -33,7 +33,7 @@ def get_event_teams(event_key):
 
 #RETURNS TEAMS AT AN EVENT IN LIST FORM
 def get_event_teams_list(event_key):
-	return sorted([int(team[1]) for team in get_event_rankings(event_key)[1:]])
+	return sorted([int(team["team_number"]) for team in get_event_teams(event_key)])
 
 #RETURNS MATCH RESULTS
 def get_event_matches(event_key):
